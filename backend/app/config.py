@@ -13,11 +13,11 @@ This includes:
 '''
 
 class Settings (BaseSettings):
-    app_name = 'Diabetes Paper Helper'
-    database_url = 'sqlite:///.diabetes_paper_helper.db'
-    openai_api_key = None
-    deepseek_api_key = None
-    llm_provider = 'nothing_yet'
+    app_name: str = "Diabetes Paper Helper"
+    database_url: str = 'sqlite:///./project_databse.db'
+    openai_api_key:str | None  = None
+    deepseek_api_key:str | None = None
+    llm_provider:str  = 'nothing_yet'
     model_config = SettingsConfigDict(env_file = '.env', extra = 'ignore')
     #extra = ignore avoids the code crashes when .env doesn't have some mentioned variables
 
