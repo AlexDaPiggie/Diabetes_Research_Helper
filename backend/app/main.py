@@ -7,6 +7,6 @@ app = FastAPI(title = settings.app_name)
 '''
 run the below function everytime the tag /health is called, making sure that the backend is responding
 '''
-@app.get('/health') 
+@app.get('/health')
 def health():
     return {'status': 'gud'}
